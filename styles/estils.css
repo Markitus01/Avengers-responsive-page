@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Avengers;
+  src: url(../font/avengersfont.ttf);
+}
+html {
+  background-image: url("../img/avengers_bg.png");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+}
