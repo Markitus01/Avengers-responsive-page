@@ -3,8 +3,26 @@
   src: url(../font/avengersfont.ttf);
 }
 html {
+  font-family: Avengers;
+  font-size: 40px;
+  color: purple;
   background-image: url("../img/avengers_bg.png");
   background-repeat: no-repeat;
   min-height: 100vh;
   background-size: cover;
+}
+html #galeria {
+  display: flex;
+  flex-wrap: wrap;
+}
+html #galeria #land,
+html #galeria #sm {
+  display: none;
+}
+html #galeria #lg {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border: solid 2px yellow;
+  border-radius: 20%;
 }
