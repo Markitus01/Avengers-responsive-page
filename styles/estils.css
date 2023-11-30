@@ -21,8 +21,10 @@ html #galeria #sm {
 }
 html #galeria #lg {
   display: flex;
+  width: 100%;
+  justify-content: center;
   align-items: center;
   background-color: black;
   border: solid 2px yellow;
-  border-radius: 20%;
+  border-radius: 15px;
 }
