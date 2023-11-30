@@ -12,5 +12,6 @@
 
     $img = obtenirImgs($tamany);
 
+    //Tornem un json amb totes les imatges carregades dinàmicament
     echo json_encode($img);
 ?>

@@ -61,16 +61,17 @@ function obtenirTamanyPag()
     });
 }
 
+//Promesa que retornara un json amb tots els avengers, o bé la causa de l'error si no funciona
 function carregarImg(tamany)
 {
     return new Promise((resolve, reject) =>
     {
-        let xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest(); 
         xhr.onreadystatechange = function ()
         {
             if (xhr.readyState == 4)
             {
-                // console.log(xhr.responseText);
+                // console.log(xhr.responseText); aquest console log mirava que tornés un json
                 if (xhr.status == 200)
                 {
                     let imagenes = JSON.parse(xhr.responseText);
