@@ -36,3 +36,56 @@ html
         }
     }
 }
+
+//Aspect between 800 and 1300 pixels
+@media (min-width: 800px) and (max-width: 1300px)
+{   
+    html > #galeria 
+    {
+        #lg, #sm
+        {
+            display: none;
+        }
+
+        // font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        
+        #land
+        {
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            border: solid 2px yellow;
+            border-radius: 15px;
+        }
+    }
+}
+
+//Aspect between default and 800 pixels
+@media (max-width: 800px)
+{   
+    html > #galeria 
+    {
+        #lg, #sm, #land
+        {
+            display: none;
+        }
+
+        // font-size: 20px;
+        // display: flex;
+        // flex-wrap: wrap;
+        
+        // #land
+        // {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     background-color: black;
+        //     border: solid 2px yellow;
+        //     border-radius: 15px;
+        // }
+    }
+}

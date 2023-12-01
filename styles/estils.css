@@ -28,3 +28,29 @@ html #galeria #lg {
   border: solid 2px yellow;
   border-radius: 15px;
 }
+@media (min-width: 800px) and (max-width: 1300px) {
+  html > #galeria {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  html > #galeria #lg,
+  html > #galeria #sm {
+    display: none;
+  }
+  html > #galeria #land {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: solid 2px yellow;
+    border-radius: 15px;
+  }
+}
+@media (max-width: 800px) {
+  html > #galeria #lg,
+  html > #galeria #sm,
+  html > #galeria #land {
+    display: none;
+  }
+}
