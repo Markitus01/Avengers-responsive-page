@@ -1,89 +1,69 @@
-document.addEventListener("DOMContentLoaded", main);
-let lastWidth = window.innerWidth;
-window.addEventListener('resize', function()
-{
-    // Comprobem si la finestra a creuat els limits per fer un resize de les imatges trucant a la funció main només si pasa els limits
-    if ((lastWidth <= 700 && window.innerWidth > 700) || 
-        (lastWidth > 700 && lastWidth <= 1300 && (window.innerWidth <= 700 || window.innerWidth > 1300)) 
-        || (lastWidth > 1300 && window.innerWidth <= 1300))
+document.addEventListener("DOMContentLoaded", carregarImatges)
+
+//Funció per crear elements al html
+function createElement(tag, attributes, content) {
+    let element = document.createElement(tag);
+
+    for (let key in attributes)
     {
-        console.log("UPDATE IMATGES");
-        main();
+        element.setAttribute(key, attributes[key]);
     }
 
-    // Actualitzem l'ample de la pagina
-    lastWidth = window.innerWidth;
-});
-
-function main() {
-    let galeria = document.getElementById('galeria');
-
-    obtenirTamanyPag().then(tamany =>
+    if (content)
     {
-        return carregarImg(tamany);
-    })
-    .then(img =>
-    { 
-        // Cada cop que canviem d'imatges, netejem i tornem a imprimir
-        galeria.innerHTML = "";
-        for (let i = 0; i < img.length; i++)
-        {
-            let imgElement = document.createElement('img');
-            imgElement.src = img[i];
-            galeria.appendChild(imgElement);
-        }
-    })
-    .catch(error =>
-    {
-        console.log("NO entra al bucle de obtenir tamany");
-        console.error('Error:', error);
-    });
+        element.innerHTML = content;
+    }
+
+    return element;
 }
 
-function obtenirTamanyPag()
+function carregarImatges()
 {
-    return new Promise((resolve) =>
+    fetch('./scripts/avengers.json').then(response => response.json()).then(avengers =>
     {
-        const WIDTH = window.innerWidth;
+        avengers.forEach(avenger => {
+            let figure = createElement('figure');
 
-        if (WIDTH <= 700)
-        {
-            resolve('sm');
-        }
-        else if (WIDTH > 700 && WIDTH <= 1300)
-        {
-            resolve('land');
-        }
-        else
-        {
-            resolve('lg');
-        }
-    });
-}
+            //Afegim el numero a la figure
+            let numberSpan = createElement('span', null, avenger.numero);
+            figure.appendChild(numberSpan);
 
-//Promesa que retornara un json amb tots els avengers, o bé la causa de l'error si no funciona
-function carregarImg(tamany)
-{
-    return new Promise((resolve, reject) =>
-    {
-        let xhr = new XMLHttpRequest(); 
-        xhr.onreadystatechange = function ()
-        {
-            if (xhr.readyState == 4)
+            let picture = createElement('picture');
+
+            // Afegim les sources per a les imatges mitjana y petita a picture
+            let medias = ["(max-width: 700px)", "(min-width: 700px) and (max-width: 1300px)"];
+            medias.forEach((size) =>
             {
-                // console.log(xhr.responseText); aquest console log mirava que tornés un json
-                if (xhr.status == 200)
+                let source;
+
+                if (size === "(max-width: 700px)")
                 {
-                    let imagenes = JSON.parse(xhr.responseText);
-                    resolve(imagenes);
+                    source = createElement('source', { type: 'image/png', media: size, srcset: avenger.imatges.petit });
                 }
-                else
+                else if (size === "(min-width: 700px) and (max-width: 1300px)")
                 {
-                    reject(xhr.statusText);
+                    source = createElement('source', { type: 'image/png', media: size, srcset: avenger.imatges.mig });
                 }
-            }
-        };
-        xhr.open('GET', './scripts/load.php?tamany=' + tamany, true);
-        xhr.send();
-    });
+
+                if (source)
+                {
+                    picture.appendChild(source);
+                }
+            });
+
+            // Afegim la imatge gran a picture
+            let img = createElement('img', { src: avenger.imatges.gran });
+            picture.appendChild(img);
+
+            // Afegim picture a la figure
+            figure.appendChild(picture);
+
+            // Afegim figcaption amb el nom a figure
+            let nomSpan = createElement('span', null, avenger.nom);
+            figure.appendChild(nomSpan);
+
+            // Finalment afegim la figure del avenger al main
+            document.querySelector("main").appendChild(figure);
+        });
+    }).catch(error => console.error('Error al cargar el JSON:', error));
 }

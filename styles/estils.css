@@ -15,16 +15,3 @@ html #galeria {
   display: flex;
   flex-wrap: wrap;
 }
-html #galeria #land,
-html #galeria #sm {
-  display: none;
-}
-html #galeria #lg {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  border: solid 2px yellow;
-  border-radius: 15px;
-}
