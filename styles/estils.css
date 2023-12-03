@@ -4,14 +4,38 @@
 }
 html {
   font-family: Avengers;
-  font-size: 40px;
-  color: purple;
+  color: blue;
   background-image: url("../img/avengers_bg.png");
   background-repeat: no-repeat;
   min-height: 100vh;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+html header {
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 0 0 1em #ffd000, 0 0 1em #ffd000;
 }
 html #galeria {
+  max-width: 100vw;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+html #galeria figure {
+  margin: 1vw;
+  width: 20vw;
+  border-radius: 15px;
+  box-shadow: 0 -0.5em 0.5em #ffd000, 0 0 0.5em #ffd000, 0 0 3em blue, 0 0 3em blue;
+  background-color: black;
+}
+html #galeria figure .imatge {
+  height: auto;
+  width: 90%;
+}
+@media (min-width: 1600px) {
+  html > body > #galeria {
+    max-width: 70vw;
+  }
 }

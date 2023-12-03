@@ -36,13 +36,13 @@ function carregarImatges()
             {
                 let source;
 
-                if (size === "(max-width: 700px)")
+                if (size === "(min-width: 700px) and (max-width: 1300px)")
                 {
-                    source = createElement('source', { type: 'image/png', media: size, srcset: avenger.imatges.petit });
+                    source = createElement('source', { class: 'imatge', type: 'image/png', media: size, srcset: avenger.imatges.petit });
                 }
-                else if (size === "(min-width: 700px) and (max-width: 1300px)")
+                else if (size === "(max-width: 700px)")
                 {
-                    source = createElement('source', { type: 'image/png', media: size, srcset: avenger.imatges.mig });
+                    source = createElement('source', { class: 'imatge', type: 'image/png', media: size, srcset: avenger.imatges.mig });
                 }
 
                 if (source)
@@ -52,14 +52,14 @@ function carregarImatges()
             });
 
             // Afegim la imatge gran a picture
-            let img = createElement('img', { src: avenger.imatges.gran });
+            let img = createElement('img', { class: 'imatge', src: avenger.imatges.gran });
             picture.appendChild(img);
 
             // Afegim picture a la figure
             figure.appendChild(picture);
 
             // Afegim figcaption amb el nom a figure
-            let nomSpan = createElement('span', null, avenger.nom);
+            let nomSpan = createElement('span', { class: 'nom' }, avenger.nom);
             figure.appendChild(nomSpan);
 
             // Finalment afegim la figure del avenger al main
