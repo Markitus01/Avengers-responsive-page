@@ -1,0 +1,243 @@
+[
+    {
+        "numero": "1",
+        "nom": "Antman",
+        "imatges":
+        {
+            "petit": "img/sm/antman.png",
+            "mig": "img/land/antman.png",
+            "gran": "img/lg/antman.png"
+        }
+    },
+
+    {
+        "numero": "2",
+        "nom": "Bucky",
+        "imatges":
+        {
+            "petit": "img/sm/bucky.png",
+            "mig": "img/land/bucky.png",
+            "gran": "img/lg/bucky.png"
+        }
+    },
+
+    {
+        "numero": "3",
+        "nom": "Black Widow",
+        "imatges":
+        {
+            "petit": "img/sm/bw.png",
+            "mig": "img/land/bw.png",
+            "gran": "img/lg/bw.png"
+        }
+    },
+
+    {
+        "numero": "4",
+        "nom": "Capitan America",
+        "imatges":
+        {
+            "petit": "img/sm/cap.png",
+            "mig": "img/land/cap.png",
+            "gran": "img/lg/cap.png"
+        }
+    },
+
+    {
+        "numero": "5",
+        "nom": "Drax",
+        "imatges":
+        {
+            "petit": "img/sm/drax.png",
+            "mig": "img/land/drax.png",
+            "gran": "img/lg/drax.png"
+        }
+    },
+
+    {
+        "numero": "6",
+        "nom": "Falcon",
+        "imatges":
+        {
+            "petit": "img/sm/falcon.png",
+            "mig": "img/land/falcon.png",
+            "gran": "img/lg/falcon.png"
+        }
+    },
+
+    {
+        "numero": "7",
+        "nom": "Fury",
+        "imatges":
+        {
+            "petit": "img/sm/fury.png",
+            "mig": "img/land/fury.png",
+            "gran": "img/lg/fury.png"
+        }
+    },
+
+    {
+        "numero": "8",
+        "nom": "Gamora",
+        "imatges":
+        {
+            "petit": "img/sm/gamora.png",
+            "mig": "img/land/gamora.png",
+            "gran": "img/lg/gamora.png"
+        }
+    },
+
+    {
+        "numero": "9",
+        "nom": "Groot",
+        "imatges":
+        {
+            "petit": "img/sm/groot.png",
+            "mig": "img/land/groot.png",
+            "gran": "img/lg/groot.png"
+        }
+    },
+
+    {
+        "numero": "10",
+        "nom": "Hawkeye",
+        "imatges":
+        {
+            "petit": "img/sm/hawkeye.png",
+            "mig": "img/land/hawkeye.png",
+            "gran": "img/lg/hawkeye.png"
+        }
+    },
+
+    {
+        "numero": "11",
+        "nom": "Hulk",
+        "imatges":
+        {
+            "petit": "img/sm/hulk.png",
+            "mig": "img/land/hulk.png",
+            "gran": "img/lg/hulk.png"
+        }
+    },
+
+    {
+        "numero": "12",
+        "nom": "Ironman",
+        "imatges":
+        {
+            "petit": "img/sm/ironman.png",
+            "mig": "img/land/ironman.png",
+            "gran": "img/lg/ironman.png"
+        }
+    },
+
+    {
+        "numero": "13",
+        "nom": "Mantis",
+        "imatges":
+        {
+            "petit": "img/sm/mantis.png",
+            "mig": "img/land/mantis.png",
+            "gran": "img/lg/mantis.png"
+        }
+    },
+
+    {
+        "numero": "14",
+        "nom": "Maria",
+        "imatges":
+        {
+            "petit": "img/sm/maria.png",
+            "mig": "img/land/maria.png",
+            "gran": "img/lg/maria.png"
+        }
+    },
+
+    {
+        "numero": "15",
+        "nom": "Capitana Marvel",
+        "imatges":
+        {
+            "petit": "img/sm/marvel.png",
+            "mig": "img/land/marvel.png",
+            "gran": "img/lg/marvel.png"
+        }
+    },
+
+    {
+        "numero": "16",
+        "nom": "Nebula",
+        "imatges":
+        {
+            "petit": "img/sm/nebula.png",
+            "mig": "img/land/nebula.png",
+            "gran": "img/lg/nebula.png"
+        }
+    },
+
+    {
+        "numero": "17",
+        "nom": "Rhodes",
+        "imatges":
+        {
+            "petit": "img/sm/rhodes.png",
+            "mig": "img/land/rhodes.png",
+            "gran": "img/lg/rhodes.png"
+        }
+    },
+
+    {
+        "numero": "18",
+        "nom": "Scarlet Witch",
+        "imatges":
+        {
+            "petit": "img/sm/scarlet.png",
+            "mig": "img/land/scarlet.png",
+            "gran": "img/lg/scarlet.png"
+        }
+    },
+
+    {
+        "numero": "19",
+        "nom": "Shuri",
+        "imatges":
+        {
+            "petit": "img/sm/shuri.png",
+            "mig": "img/land/shuri.png",
+            "gran": "img/lg/shuri.png"
+        }
+    },
+
+    {
+        "numero": "20",
+        "nom": "Starlord",
+        "imatges":
+        {
+            "petit": "img/sm/starlord.png",
+            "mig": "img/land/starlord.png",
+            "gran": "img/lg/starlord.png"
+        }
+    },
+
+    {
+        "numero": "21",
+        "nom": "Thanos",
+        "imatges":
+        {
+            "petit": "img/sm/thanos.png",
+            "mig": "img/land/thanos.png",
+            "gran": "img/lg/thanos.png"
+        }
+    },
+
+    {
+        "numero": "22",
+        "nom": "Thor",
+        "imatges":
+        {
+            "petit": "img/sm/thor.png",
+            "mig": "img/land/thor.png",
+            "gran": "img/lg/thor.png"
+        }
+    }
+]

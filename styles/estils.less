@@ -1,4 +1,5 @@
-@font-face {
+@font-face
+{
     font-family: Avengers;
     src: url(../font/avengersfont.ttf);
 }
@@ -6,33 +7,194 @@
 html
 {
     font-family: Avengers;
-    font-size: 40px;
-    color: purple;
+    color: #3b00fd;
     background-image: url("../img/avengers_bg.png");
     background-repeat: no-repeat;
     min-height: 100vh;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    header
+    {
+        text-align: center;
+        font-size: 60px;
+        transition: font-size 1s ease;
+        text-shadow: 
+            // 1px 1px 1px rgb(255, 208, 0),
+            0 0 1em rgb(255, 208, 0),
+            0 0 1em rgb(255, 208, 0);
+    }
 
     #galeria
     {
-        #land, #sm
-        {
-            display: none;
-        }
-
-        // font-size: 20px;
+        max-width: 100vw;
         display: flex;
         flex-wrap: wrap;
-        
-        #lg
+        justify-content: center;
+        transition: max-width 1s ease;
+
+        figure
         {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
-            border: solid 2px yellow;
+            margin: 1vw;
+            margin-bottom: 2vw;
+            width: 30%;
+            transition: width 1s ease;
             border-radius: 15px;
+            box-shadow: 
+                0 -0.5em 0.5em rgb(255, 208, 0),
+                0 0 0.5em rgb(255, 208, 0),
+                0 0 1.5em blue,
+                0 0 1.5em blue;
+            background-color: black;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .imatge
+            {
+                height: auto;
+                width: 90%;
+
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                transition: width 1s ease;
+            }
+
+            // Estils dels noms i numeros (el text shadow l'he fet amb la pàgina https://html-css-js.com/css/generator/text-shadow/)
+            position: relative;
+            text-shadow: 0 1px 0px #fbbb09, 1px 0 0px #cfc63f, 1px 2px 1px #fbbb09, 2px 1px 1px #cfc63f, 2px 3px 2px #fbbb09, 3px 2px 2px #cfc63f, 3px 4px 2px #fbbb09, 4px 3px 3px #cfc63f, 4px 5px 3px #fbbb09, 5px 4px 2px #cfc63f, 5px 6px 2px #fbbb09, 6px 5px 2px #cfc63f, 6px 7px 1px #fbbb09, 7px 6px 1px #cfc63f, 7px 8px 0px #fbbb09, 8px 7px 0px #cfc63f, 8px 7px 0px rgba(236,255,0,0);
+            color: #3b00fd;
+
+            span
+            {
+                position: absolute;
+                bottom: 5vw;
+                left: 1vw;
+                font-size: 5vw;
+                transition: font-size 1s ease;
+            }
+
+            .nom
+            {
+                bottom: 4vw;
+                left: 5.25vw;
+                font-size: 2.5vw;
+                transition: font-size 1s ease;
+            }
+        }
+    }
+}
+
+// Mq per fer que la galeria es mantingui a 70wv a partir de 1600px
+@media (min-width: 1600px)
+{
+    html > body > #galeria
+    {
+        max-width: 70vw;
+
+        figure 
+        {
+            span 
+            {
+                font-size: 80px;
+            }
+
+            .nom 
+            {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// Disposició entre 700px i 1300px
+@media (min-width: 700px) and (max-width: 1300px)
+{
+    html > body > #galeria
+    {
+        figure 
+        {
+            width: 45%;
+
+            .imatge 
+            {
+                width: 20%;
+
+                margin-right: 6vw;
+                margin-top: 2%;
+                margin-bottom: 2%;
+            }
+
+            // Estils del text
+            text-shadow: 2px 2px 0 #fbbb09, 2px -2px 0 #fbbb09, -2px 2px 0 #fbbb09, -2px -2px 0 #fbbb09, 2px 0px 0 #fbbb09, 0px 2px 0 #fbbb09, -2px 0px 0 #fbbb09, 0px -2px 0 #fbbb09, 2px 2px 2px rgba(206,89,55,0);
+
+            span
+            {
+                bottom: 7vw;
+                left: auto;
+                right: 22vw;
+                font-size: 2.5vw;
+            }
+
+            .nom
+            {
+                bottom: 4vw;
+                left: auto;
+                right: 22vw;
+                font-size: 3vw;
+            }
+        }
+    }
+}
+
+// Disposició mínima fins als 700px
+@media (max-width: 700px)
+{
+    html
+    {
+        header
+        {
+            font-size: 40px;
+        }
+
+        body > #galeria
+        {
+            figure 
+            {
+                width: 100%;
+
+                .imatge 
+                {
+                    width: 40%;
+                    margin-top: 1%;
+                    margin-bottom: 1%;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                // Estils del text
+                text-shadow: 2px 2px 0 #fbbb09, 2px -2px 0 #fbbb09, -2px 2px 0 #fbbb09, -2px -2px 0 #fbbb09, 2px 0px 0 #fbbb09, 0px 2px 0 #fbbb09, -2px 0px 0 #fbbb09, 0px -2px 0 #fbbb09, 2px 2px 2px rgba(206,89,55,0);
+
+                span
+                {
+                    bottom: 5vw;
+                    left: 20vw;
+                    font-size: 8vw;
+                }
+
+                .nom
+                {
+                    bottom: 3vw;
+                    left: auto;
+                    right: 10vw;
+                    font-size: 8vw;
+                }
+            }
         }
     }
 }
